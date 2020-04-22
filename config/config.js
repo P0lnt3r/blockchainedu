@@ -69,7 +69,7 @@ export default defineConfig({
           routes: [
             {
               path: '/bm/discuss',
-              name: '答疑管理',
+              name: '答疑管理1',
               icon: 'smile',
               component: './discuss',
             },
