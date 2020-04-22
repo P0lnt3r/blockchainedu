@@ -26,70 +26,64 @@ export default defineConfig({
   // umi routes: https://umijs.org/docs/routing
   routes: [
     {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
+      path: '/',
+      redirect: '/lessions/index',
     },
     {
-      path: '/',
+      path: '/lessions',
       component: '../layouts/SecurityLayout',
-      routes: [
+      routes:[
+        {
+          path: '/lessions/index',
+          component: './index',
+        },
+        {
+          path: '/lessions/1',
+          component: './lessions/lession1',
+        },
+        {
+          path: '/lessions/1/1',
+          component: './lessions/lession1/1_1',
+        },
+        {
+          path: '/lessions/1/2',
+          component: './lessions/lession1/1_2',
+        },
+        {
+          path: '/lessions/1/3',
+          component: './lessions/lession1/1_3',
+        },
+        {
+          redirect:'/lessions/index'
+        }
+      ]
+    },
+   
+    {
+      path:'/bm',
+      component: '../layouts/SecurityLayout',
+      routes:[
         {
           path: '/',
           component: '../layouts/BasicLayout',
-          authority: ['admin', 'user'],
           routes: [
             {
-              path: '/',
-              redirect: '/welcome',
-            },
-            {
-              path: '/welcome',
-              name: 'welcome',
+              path: '/bm/discuss',
+              name: '答疑管理',
               icon: 'smile',
-              component: './Welcome',
+              component: './discuss',
             },
             {
-              path: '/admin',
-              name: 'admin',
-              icon: 'crown',
-              component: './Admin',
-              authority: ['admin'],
-              routes: [
-                {
-                  path: '/admin/sub-page',
-                  name: 'sub-page',
-                  icon: 'smile',
-                  component: './Welcome',
-                  authority: ['admin'],
-                },
-              ],
-            },
-            {
-              name: 'list.table-list',
-              icon: 'table',
-              path: '/list',
-              component: './ListTableList',
-            },
-            {
-              component: './404',
-            },
+              redirect:'/404'
+            }
           ],
         },
-        {
-          component: './404',
-        },
-      ],
+      ]
     },
     {
       component: './404',
     },
+
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {

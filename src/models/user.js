@@ -1,4 +1,4 @@
-import { queryCurrent, query as queryUsers } from '@/services/user';
+import { queryCurrent, query as queryUsers , checkCode } from '@/services/user';
 
 const UserModel = {
   namespace: 'user',
@@ -6,6 +6,7 @@ const UserModel = {
     currentUser: {},
   },
   effects: {
+
     *fetch(_, { call, put }) {
       const response = yield call(queryUsers);
       yield put({
@@ -18,13 +19,33 @@ const UserModel = {
       const response = yield call(queryCurrent);
       yield put({
         type: 'saveCurrentUser',
-        payload: response,
+        payload: response.data,
       });
     },
+
+    *checkCode( { payload } , { call , put , select } ){
+      const { code } = payload;
+      const response = yield call(checkCode , code);
+      yield put(
+        {
+          type: 'afterCheckCode' ,
+          payload: response.data
+        }
+      )
+    }
+
   },
   reducers: {
+    afterCheckCode( state , action ){
+      const { payload } = action;
+      localStorage.setItem( "jwt" , payload.jwt  );
+      return { ...state , currentUser:{ ...(payload.user) } }
+    },
+
     saveCurrentUser(state, action) {
-      return { ...state, currentUser: action.payload || {} };
+      const { payload } = action;
+      localStorage.setItem( "jwt" , payload.jwt  );
+      return { ...state , currentUser:{ ...(payload.user) } }
     },
 
     changeNotifyCount(
@@ -42,6 +63,7 @@ const UserModel = {
         },
       };
     },
+
   },
 };
 export default UserModel;
