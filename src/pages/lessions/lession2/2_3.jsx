@@ -16,22 +16,23 @@ export default () => {
       <div className={styles.frame_l}>
         <div className={styles.practical}>
 
-          <div className={styles.h1}>实训第一堂</div>
-          <div className={styles.h2}>数字货币发行</div>
+          <div className={styles.h1}>实训第二堂</div>
+          <div className={styles.h2}>数字货币交易</div>
 
           <div className={styles.con_third} >
 
             <div className={styles.congra}>恭喜你，本节实训完成！</div>
             <div className={styles.quesTitle}>下面我们来对之前的思考题进行解答 : </div>
 
-            <div className={styles.ques1}><span>发行后的数字资产（如BTC），是如何被赋予价值的呢？</span></div>
-            <div className={styles.ques2}><span>是否所有数字货币资产都有价值？</span></div>
-            <div className={styles.ques3}><span>能否总结出一套对价值评判的标准？</span></div>
+            <div className={styles.ques1}><span>在数字货币交易中可能出现哪些作弊行为？</span></div>
+            <div className={styles.ques2}><span>BTC是如何解决这些作弊问题的？</span></div>
+            <div className={styles.ques3}><span>在解决以上问题时，是以牺牲什么为代价的？</span></div>
 
           </div>
           
           <div className={styles.clickbtn}>
-            <Button type='primary' size='large' onClick={ ()=> history.push('/lessions/2') }>进入实训</Button>
+            <Button type='primary' size='large' onClick={ ()=>{
+            } }>进入实训</Button>
           </div>
 
         </div>
@@ -49,9 +50,9 @@ export default () => {
                 <img src={imgSrc_sy_r_2} />  下节难度:<font>中</font><br />
               </div>
               <span>
-                1. 发行后的资产都在同一地址，如何转出？<br />
-                2. 一笔链上资产的转出需要哪些要素？<br />
-                3. 主流公链的转账分别需要多久？
+                1. 常见的数字货币钱包有哪些？<br />
+                2. 什么是钱包私钥？<br />
+                3. 什么是冷钱包？热钱包？
               </span>
             </div>
           </div>
@@ -65,10 +66,10 @@ export default () => {
                 <img src={imgSrc_sy_r_3} /> 思考题 <br />
               </div>
               <span>
-                1. 主流公链可以从BTC、ETH、EOS开始<br />
-                2. 数字货币交易涉及到一个很重要的概念——矿工费<br />
-                3. BTC转账不够理想，出现了“闪电网络”<br />
-                4. 对转账速度的提升中，EOS选择了一种特殊的方式，而它是以牺牲什么为代价的？你怎么看？
+                1. 钱包的本质就是管理数字货币资产<br />
+                2. 私钥、公钥和签名之间的关系是一个学习难点<br />
+                3. 有兴趣的同学可以查看助记词背后的实现原理<br />
+                4. 钱包的冷与热，与是否触网有关，两种钱包各有利弊，各有使用场景
               </span>
             </div>
           </div>

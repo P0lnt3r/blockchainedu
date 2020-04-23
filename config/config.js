@@ -54,6 +54,22 @@ export default defineConfig({
           component: './lessions/lession1/1_3',
         },
         {
+          path: '/lessions/2',
+          component: './lessions/lession2',
+        },
+        {
+          path: '/lessions/2/1',
+          component: './lessions/lession2/2_1',
+        },
+        {
+          path: '/lessions/2/2',
+          component: './lessions/lession2/2_2',
+        },
+        {
+          path: '/lessions/2/3',
+          component: './lessions/lession2/2_3',
+        },
+        {
           redirect:'/lessions/index'
         }
       ]

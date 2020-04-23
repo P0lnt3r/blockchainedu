@@ -30,7 +30,7 @@ export default () => {
                 <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
               </li>
               <li>
-                <span onClick={()=>history.push('/lessions/1')}>实训第一堂 数字货币发行</span>
+                <span onClick={()=>history.push('/lessions/2')}>实训第二堂 数字货币交易</span>
                 <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
               </li>
               <li>
