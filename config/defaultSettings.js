@@ -11,7 +11,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: '天择区块链教育',
   pwa: false,
   iconfontUrl: '',
 };

@@ -91,7 +91,6 @@ export default () => {
 
       <div className={styles.frame_r}>
         <div className={styles.tle}>
-          <div className={styles.ico} ><img src={imgSrc_sy_r_1} /></div>
           <div className={styles.conbtc} >BTC</div>
         </div>
         <br />
@@ -101,10 +100,10 @@ export default () => {
             <Col className={styles.title} offset={4}>比特币 ( B T C )</Col>
           </Row>
           <div style={{ width: '90%', margin: 'auto' }}>
-            <Divider style={{ backgroundColor:'#809ae8' }} />
+            <Divider style={{ backgroundColor:'rgba(255,255,255,0.3)' }} />
           </div>
           <Row>
-            <Col className={styles.basic} offset={4} span={4}>基本信息</Col>
+            <Col className={styles.basic} offset={3} span={5}>基本信息</Col>
           </Row>
           <Row className={styles.desc}>
             <Col className={styles.label} offset={4} span={4}>发行日期</Col>

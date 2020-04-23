@@ -10,6 +10,7 @@ const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
 const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
 
 export default () => {
+
   return (
     <div className={styles.frame}>
       <div className={styles.frame_l}>
@@ -44,7 +45,6 @@ export default () => {
 
       <div className={styles.frame_r}>
         <div className={styles.tle}>
-          <div className={styles.ico} ><img src={imgSrc_sy_r_1} /></div>
           <div className={styles.con} >实训目标</div>
         </div>
 

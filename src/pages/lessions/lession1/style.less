@@ -5,7 +5,7 @@
   margin: 0 auto;
   background:url(../../../assets/lessions/sy_l_bg.png) bottom repeat-x; 
   overflow:hidden;
-  .frame_l{ width:50%; float:left;margin-left: 20%; };
+  .frame_l{ width:55%; float:left;margin-left: 15%; };
   .practical{ 
     width:100%; margin:80px 0 0 0px; display:block;
     .h1{ font-family:"方正兰亭中黑_GBK"; font-size:40px; color:#101010};
@@ -15,15 +15,15 @@
     .con{
       width:95%; border-radius:10px; background:#f7f6fb; margin-top:20px;
       .text{
-        width:100%;  padding:24px 0 24px 30px; letter-spacing:2px; font-size:14px;
+        width:100%;  padding:24px 24px 24px 30px; letter-spacing:2px; font-size:14px;
         .tle{font-size:18px; color:#1b1b1b; margin-bottom:10px}
         .introduce{font-size:14px; color:#7d7d7d; line-height:18px}
       }
     }
     .lct{ 
       margin:45px 0 0 0px; 
+      text-align: center;
       img {
-        margin-left: 15%;
       }
     }
 
@@ -32,8 +32,8 @@
       width:95%; border-radius:10px; margin-top:20px;
       .text{
         width:100%;  padding:24px 0 24px 30px; letter-spacing:2px; font-size:14px;
-        .tle{font-size:18px; color:#1b1b1b; margin-bottom:10px}
-        .wdfine{ margin: 3% 0 0 0; font-size: 14px; line-height: 14px;
+        .tle{font-size:20px; color:#1b1b1b; margin-bottom:10px}
+        .wdfine{ margin: 3% 0 0 0; font-size: 16px; line-height: 16px;
           img{  width: 5%; }
           span{ font-weight: 700; margin-left: 5px; }
         }
@@ -50,17 +50,18 @@
 
     .con_third{
       width:95%; border-radius:10px; margin-top:20px;
-      .congra{ font-size: 30px;color: #d9ca7b; };
+      .congra{ font-size: 30px;color: #ff9600; };
       .quesTitle{ margin-top: 2%;margin-bottom: 2% };
-      .ques1{ font-size: 24px;line-height: 120px; };
-      .ques2{ font-size: 24px;line-height: 120px; };
-      .ques3{ font-size: 24px;line-height: 120px; };
+      .ques1{ width: 801px; height: 156px; font-size: 24px;background:url(../../../assets/lessions/ques1.png) no-repeat; color: #fff; margin-bottom: 20px };
+         span{ margin: 65px 0 0 42px; float: left;}
+      .ques2{ width: 801px; height: 156px; font-size: 24px; background:url(../../../assets/lessions/ques2.png) no-repeat; color: #fff; margin-bottom: 20px   };
+      .ques3{ width: 801px; height: 156px; font-size: 24px; background:url(../../../assets/lessions/ques3.png) no-repeat; color: #fff   };
     }
 
     .clickbtn{
       width: 100%;
       text-align: center;
-      margin-top: 10%;
+      margin-top: 8%;
       button{
         width: 200px;
         border-radius:10px;
@@ -71,32 +72,42 @@
 
 // Right Content
 .frame_r{ 
-  width:30%; background:#2f8cfe; float:right; background-image: linear-gradient(to bottom right, #2e9dff, #3073fd);
-  .tle{ width: 100%;
-    .ico{ float:left;  margin-left: 20%;height: 180px;
+  width:30%; background:#2f8cfe; float:right;min-height: 1200px; background-image: linear-gradient(to bottom right, #2e9dff, #3073fd);
+  .tle{ 
+    width: 100%;
+    .ico{ float:left;  margin-left: 15%;height: 180px;
       img{ height: 130px; }
     };
-    .conbtc{ float:right; margin-right: 5% ; font-family:"方正兰亭特黑简体"; font-size:120px;line-height: 160px; color:rgba(23,99,255,0.4);font-weight: 1000; };
-    .con{ float:right; margin-right: 5% ; font-family:"方正兰亭特黑简体"; font-size:85px;line-height: 160px; color:rgba(23,99,255,0.4);font-weight: 1000; };
+    .conbtc{ background:url(../../../assets/lessions/sy_r_1.png) top no-repeat ; 
+      background-position: 60px 0px;padding: 0 0 0 200px;
+      white-space: nowrap;overflow: hidden;text-overflow: ellipsis;background-size: 70px;
+      float:left; width:100%;font-family:"方正兰亭特黑简体"; font-size:100px; color:rgba(23,99,255,0.4); overflow: hidden;};
+    .con{ 
+      background:url(../../../assets/lessions/sy_r_1.png) top no-repeat ; 
+      background-position: 60px 0px;padding: 20px 0 0 130px;
+      white-space: nowrap;overflow: hidden;text-overflow: ellipsis;background-size: 70px;
+      float:left; width:100%;font-family:"方正兰亭特黑简体"; font-size:75px; color:rgba(23,99,255,0.4); overflow: hidden;
+    };
   }
   .block{ width:100% ;
     .con { color:#FFF ;
       .ico { width:100%; float:left; margin-left: 10% ; font-size:20px;};
       .bjnd { float:left; font-size:16px;letter-spacing:2px; margin-top:10px; width:100%; 
-        font { width:33px; height:33px; text-align:center; border-radius:3px; background:#FFF; color:#006ee3; display: inline-block;};
+        font { width:33px; font-size: 20px; margin-left: 10px;  text-align:center; border-radius:3px; background:#FFF; color:#006ee3; display: inline-block;};
         span { font-size:16px; margin-top:10px; display:inline-block; line-height:40px;margin-left: 20%;width: 70%};
       }
     };
   };
   .block_img{ float:left; margin-left:42px; margin-top:20px}
+  .yxzb_img{ float:right; margin-right:32px; padding-bottom: 15px;}
 
   .btc{ 
     float:left; width:100% ; color:#FFF ; letter-spacing:1px;  min-height: 800px;
     background:url(../../../assets/lessions/sy_r_4.png) bottom no-repeat; 
     background-position: 200px 450px;
-    .title{ font-size: 32px; font-weight: 400;};
+    .title{ font-size: 40px; font-family: "方正兰亭中黑_GBK"};
     .desc{ margin: 4% 0 0 0; }
-    .basic{ font-weight: 500; text-align: right; font-size: 18px; }
+    .basic{  text-align: right; font-size: 20px; }
     .label{ font-weight: 600; text-align: right;};
     .content{ margin-left: 2%; }
   }

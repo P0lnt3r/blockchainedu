@@ -8,6 +8,7 @@ const imgSrc_sy_r_1 = require('@/assets/lessions/sy_r_1.png');
 const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_2.png');
 const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
 const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
+const imgSrc_yxzb_bg = require('@/assets/lessions/yxzb_bg.png');
 
 export default () => {
   return (
@@ -23,9 +24,9 @@ export default () => {
             <div className={styles.congra}>恭喜你，本节实训完成！</div>
             <div className={styles.quesTitle}>下面我们来对之前的思考题进行解答 : </div>
 
-            <div className={styles.ques1}>1. 发行后的数字资产（如BTC），是如何被赋予价值的呢？</div>
-            <div className={styles.ques2}>2. 是否所有数字货币资产都有价值？</div>
-            <div className={styles.ques3}>3. 能否总结出一套对价值评判的标准？</div>
+            <div className={styles.ques1}><span>发行后的数字资产（如BTC），是如何被赋予价值的呢？</span></div>
+            <div className={styles.ques2}><span>是否所有数字货币资产都有价值？</span></div>
+            <div className={styles.ques3}><span>能否总结出一套对价值评判的标准？</span></div>
 
           </div>
           
@@ -39,7 +40,6 @@ export default () => {
 
       <div className={styles.frame_r}>
         <div className={styles.tle}>
-          <div className={styles.ico} ><img src={imgSrc_sy_r_1} /></div>
           <div className={styles.con} >预习准备</div>
         </div>
 
@@ -74,7 +74,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className={ styles.block_img }><img src={imgSrc_sy_r_4} /></div>
+        <div className={ styles.yxzb_img }><img src={imgSrc_yxzb_bg} /></div>
       </div>
 
     </div>
