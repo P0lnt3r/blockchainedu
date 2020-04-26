@@ -1,4 +1,4 @@
-import { Button , Pagination } from 'antd';
+import { Pagination } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { history } from 'umi';
 import styles from './style.less';
