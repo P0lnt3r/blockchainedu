@@ -70,6 +70,14 @@ export default defineConfig({
           component: './lessions/lession2/2_3',
         },
         {
+          path: '/lessions/discuss/questions/:courseId',
+          component: './lessions/discuss/questions',
+        },
+        {
+          path: '/lessions/discuss/replies',
+          component: './lessions/discuss/replies',
+        },
+        {
           redirect:'/lessions/index'
         }
       ]

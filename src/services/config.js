@@ -9,6 +9,7 @@ const ENV = 'dev';
 const config = {
     dev:{
         bm_api_base: 'http://localhost:8080/api/bm',        
+        publics_api_base: 'http://localhost:8080/api/publics'
     },
     test:{
         bm_api_base: 'http://127.0.0.1:8080'
@@ -19,4 +20,5 @@ const config = {
 }
 
 export const BM_API_BASE = config[ ENV ].bm_api_base;
+export const PUBLICS_API_BASE = config[ ENV ].publics_api_base;
 
