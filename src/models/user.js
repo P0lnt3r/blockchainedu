@@ -1,4 +1,5 @@
-import { queryCurrent, query as queryUsers , checkCode } from '@/services/user';
+import { query as queryUsers } from '@/services/user';
+import { checkCode , queryCurrent} from '@/services/publics'
 
 const UserModel = {
   namespace: 'user',
@@ -6,7 +7,6 @@ const UserModel = {
     currentUser: {},
   },
   effects: {
-
     *fetch(_, { call, put }) {
       const response = yield call(queryUsers);
       yield put({
@@ -14,21 +14,20 @@ const UserModel = {
         payload: response,
       });
     },
-
     *fetchCurrent(_, { call, put }) {
+      console.log( 'dofetch current' );
       const response = yield call(queryCurrent);
       yield put({
         type: 'saveCurrentUser',
         payload: response.data,
       });
     },
-
     *checkCode( { payload } , { call , put , select } ){
       const { code } = payload;
       const response = yield call(checkCode , code);
       yield put(
         {
-          type: 'afterCheckCode' ,
+          type: 'saveCurrentUser' ,
           payload: response.data
         }
       )
@@ -36,18 +35,11 @@ const UserModel = {
 
   },
   reducers: {
-    afterCheckCode( state , action ){
-      const { payload } = action;
-      localStorage.setItem( "jwt" , payload.jwt  );
-      return { ...state , currentUser:{ ...(payload.user) } }
-    },
-
     saveCurrentUser(state, action) {
       const { payload } = action;
       localStorage.setItem( "jwt" , payload.jwt  );
       return { ...state , currentUser:{ ...(payload.user) } }
     },
-
     changeNotifyCount(
       state = {
         currentUser: {},
