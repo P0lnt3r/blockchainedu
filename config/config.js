@@ -74,7 +74,7 @@ export default defineConfig({
           component: './lessions/discuss/questions',
         },
         {
-          path: '/lessions/discuss/replies',
+          path: '/lessions/discuss/replies/:discussId',
           component: './lessions/discuss/replies',
         },
         {
