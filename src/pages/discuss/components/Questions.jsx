@@ -128,6 +128,7 @@ export default (props) => {
                 options={false}
                 toolBarRender={false}
                 actionRef={actionRef}
+                pagination={{ pageSize:10 }}
                 request={(params) => queryDiscussQuestions(params)}>
                 
             </ProTable>

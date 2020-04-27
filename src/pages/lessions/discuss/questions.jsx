@@ -35,7 +35,7 @@ export default (props) => {
             <div className={styles.innerpages} >
                 <h1>答疑专区</h1>
                 <div className={styles.con}>
-                    <ul style={{minHeight:'700px'}}>
+                    <ul style={{minHeight:'700px' , marginLeft:'10px'}}>
                         {questions.length > 0 &&
                             questions.map(question => {
                                 return (

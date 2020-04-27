@@ -115,6 +115,7 @@ export default (props) => {
         toolBarRender={false}
         columns={columns}
         actionRef={actionRef}
+        pagination={{ pageSize:10 }}
         request={(params) => queryDiscussReplies(params)}>
       </ProTable>
 
