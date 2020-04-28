@@ -7,6 +7,10 @@ import Question from './Question';
 
 export default (props) => {
 
+    useEffect( ()=>{
+        window.document.title='答疑专区';
+    } )
+
     const courseId = props.match.params.courseId;
     const [questions, setQuesions] = useState([]);
     const [pagination, setPagination] = useState({

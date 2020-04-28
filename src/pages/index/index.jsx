@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
@@ -8,6 +8,11 @@ const index_jjp = require('@/assets/lessions/index_jjp.png');
 
 
 export default () => {
+
+  useEffect( ()=>{
+    window.document.title = '天择区块链教育';
+  } );
+  
   return (
     <div className={styles.box}>
       <div className={styles.boxs}>

@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import { history } from 'umi';
 import styles from './style.less';
 
@@ -9,6 +9,10 @@ const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_23.png');
 const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
 
 export default () => {
+
+  useEffect( ()=>{
+    window.document.title = '实训第二堂-数字货币交易';
+  } )
 
   return (
     <div className={styles.frame}>

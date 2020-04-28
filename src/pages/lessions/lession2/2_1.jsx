@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
@@ -17,6 +17,11 @@ const second_zcms = require('@/assets/lessions/second_xws.png');
 
 
 export default () => {
+
+  useEffect( ()=>{
+    window.document.title = '实训第二堂-数字货币交易';
+  } )
+
   return (
     <div className={styles.frame}>
       <div className={styles.frame_l}>

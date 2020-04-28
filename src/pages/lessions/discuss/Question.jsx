@@ -16,6 +16,8 @@ const tailLayout = {
 
 export default ( props ) => {
 
+    
+
     const [form] = Form.useForm();
     const { data , callback } = props;
     const { id , name } = data;

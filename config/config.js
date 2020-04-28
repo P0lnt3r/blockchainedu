@@ -27,7 +27,7 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/lessions/index',
+      redirect: '/lessions/index'
     },
     {
       path: '/lessions',
@@ -93,7 +93,7 @@ export default defineConfig({
           routes: [
             {
               path: '/bm/discuss',
-              name: '答疑管理1',
+              name: '答疑管理',
               icon: 'smile',
               component: './discuss',
             },

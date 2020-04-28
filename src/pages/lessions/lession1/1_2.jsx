@@ -1,5 +1,5 @@
 import { Button, Descriptions, Row, Col, Divider, Form, Input,Select,Option } from 'antd';
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
@@ -31,14 +31,11 @@ const formatNumber = (value) => {
   return `${prefix}${result}${list[1] ? `.${list[1]}` : ''}`;
 }
 
-const btcInfo = [
-  {
-    title: '发行日期',
-    content: '2010-02-02'
-  },
-]
-
 export default () => {
+
+  useEffect( ()=>{
+    window.document.title = '实训第一堂-数字货币发行';
+  } )
 
   const [form] = Form.useForm();
 

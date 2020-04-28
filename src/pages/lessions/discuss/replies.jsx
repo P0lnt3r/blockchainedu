@@ -6,6 +6,10 @@ import Reply from './Reply';
 
 export default (props) => {
 
+    useEffect( ()=>{
+        window.document.title='答疑专区';
+    } )
+
     const discussId = props.match.params.discussId;
 
     const [question, setQuestion] = useState(undefined);

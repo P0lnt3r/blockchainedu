@@ -1,5 +1,5 @@
 import { Button, Descriptions, Row, Col, Divider, Form, Input, Select, Switch } from 'antd';
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
@@ -10,8 +10,11 @@ const layout = {
 
 export default () => {
 
-  const [form] = Form.useForm();
+  useEffect( ()=>{
+    window.document.title = '实训第二堂-数字货币交易';
+  } )
 
+  const [form] = Form.useForm();
   const [ advance,setAdvance ] = useState( false );
 
   return (
