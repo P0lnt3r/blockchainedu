@@ -3,13 +3,6 @@ import React, { useState } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
-
-const imgSrc_sy_l_1 = require('@/assets/lessions/sy_l_1.png');
-const imgSrc_sy_r_1 = require('@/assets/lessions/sy_r_1.png');
-const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_2.png');
-const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
-const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
-
 const layout = {
   labelCol: { span: 4 },
   wrapperCol: { span: 16 },

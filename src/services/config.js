@@ -4,12 +4,12 @@
  * test: 测试环境
  * prod: 生产环境
  */
-export const ENV = 'test';
+export const ENV = 'dev';
 
 const config = {
     dev:{
-        bm_api_base: 'http://localhost:8080/api/bm',        
-        publics_api_base: 'http://localhost:8080/api/publics'
+        bm_api_base: 'http://120.77.153.35:8082/api/bm',        
+        publics_api_base: 'http://120.77.153.35:8082/api/publics'
     },
     test:{
         bm_api_base: 'http://localhost:8080/api/bm',        

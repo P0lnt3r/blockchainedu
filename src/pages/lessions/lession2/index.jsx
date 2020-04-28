@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import { history } from 'umi';
 import styles from './style.less';
 
-const imgSrc_sy_l_1 = require('@/assets/lessions/sy_l_1.png');
-const imgSrc_sy_r_1 = require('@/assets/lessions/sy_r_1.png');
-const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_2.png');
-const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
+const imgSrc_sy_l_1 = require('@/assets/lessions/sy_l_21.png');
+const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_22.png');
+const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_23.png');
 const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
 
 export default () => {

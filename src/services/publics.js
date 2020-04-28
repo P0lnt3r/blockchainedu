@@ -61,3 +61,14 @@ export async function reply( data ){
         data: data
     } );
 }
+
+/**
+ * 回答
+ */
+export async function question( data ){
+    return request(`${PUBLICS_API_BASE}/question` ,{
+        method: 'POST',
+        requestType: 'form',
+        data: data
+    } );
+}

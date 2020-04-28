@@ -31,7 +31,7 @@ export default () => {
               </li>
               <li>
                 <span onClick={()=>history.push('/lessions/2')}>实训第二堂 数字货币交易</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <button onClick={() => history.push('/lessions/discuss/questions/2')} className={styles.button} >答疑专区</button>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
 
-const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_2.png');
-const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
+const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_22.png');
+const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_23.png');
 const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
 
 const second_shwt = require('@/assets/lessions/second_shwt.png');
