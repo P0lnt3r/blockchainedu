@@ -49,9 +49,18 @@ const errorHandler = error => {
  * 配置request请求时的默认参数
  */
 
+const getJWT = function(){
+  const jwt = localStorage.getItem('jwt');
+  console.log( 'jwt:' + jwt );
+  return jwt
+}
+
 const request = extend({
   errorHandler,
   // 默认错误处理
   credentials: 'include', // 默认请求是否带上cookie
+  headers: {
+    'jwt': getJWT()
+  }
 });
 export default request;

@@ -44,10 +44,10 @@ export default ( props ) => {
             <Form.Item name='name' label='课程'>
                 { name }
             </Form.Item>
-            <Form.Item name='title' label='问题标题'>
+            <Form.Item name='title' label='问题标题' rules={[{ required: true, message: '请输入问题标题' }]}>
                 <Input />
             </Form.Item>
-            <Form.Item name='content' label='问题内容'>
+            <Form.Item name='content' label='问题内容' rules={[{ required: true, message: '请输入问题内容' }]}>
                 <Input.TextArea style={{ height:'200px' }} />
             </Form.Item>
             <Divider />

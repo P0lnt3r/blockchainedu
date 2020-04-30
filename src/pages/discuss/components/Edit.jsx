@@ -48,7 +48,7 @@ export default ( props ) => {
 
             {
                 discussContent && 
-                <Form.Item name='discussContent' label='问题内容'>
+                <Form.Item name='discussContent' label='问题内容' >
                     { discussContent }
                 </Form.Item>
             }

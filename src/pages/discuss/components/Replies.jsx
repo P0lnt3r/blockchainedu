@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Card, Typography, Alert, Row, Col, Divider, Tabs, Button , Modal , message } from 'antd';
-import { queryDiscussReplies , remove } from '@/services/discuss'
+import { Card, Typography, Alert, Row, Col, Divider, Tabs, Button, Modal, message } from 'antd';
+import { queryDiscussReplies, remove } from '@/services/discuss'
 import ProTable from '@ant-design/pro-table';
 import Edit from './Edit';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -36,14 +36,14 @@ export default (props) => {
     {
       title: '问题',
       dataIndex: 'discussTitle',
-      width:300,
+      width: 300,
       ellipsis: true,
     },
     {
       title: '回复内容',
       dataIndex: 'content',
       hideInSearch: true,
-      width:400,
+      width: 400,
       ellipsis: true,
     },
     {
@@ -56,10 +56,16 @@ export default (props) => {
       hideInSearch: true,
       valueEnum: {
         1: {
-          text: '学生',
+          text: '超级管理员',
         },
         2: {
-          text: '老师',
+          text: '学校管理员',
+        },
+        3: {
+          text: '教师',
+        },
+        4: {
+          text: '学生',
         }
       },
       filters: []
@@ -75,14 +81,14 @@ export default (props) => {
       valueType: 'option',
       render: (_, record) => (
         <>
-          <a onClick={ () => {
-            setData( record );
+          <a onClick={() => {
+            setData(record);
             setEditVisible(true);
-          } }>编辑</a>
+          }}>编辑</a>
           <Divider type="vertical" />
-          <a onClick={ () => {
-            confirmRemove( record.id )
-          } }>删除</a>
+          <a onClick={() => {
+            confirmRemove(record.id)
+          }}>删除</a>
         </>
       ),
     },
@@ -91,23 +97,23 @@ export default (props) => {
   const [data, setData] = useState(undefined);
   const [editVisible, setEditVisible] = useState(false);
 
-  const confirmRemove = ( id ) => {
+  const confirmRemove = (id) => {
     confirm({
-        title: '你确定要删除这个回复吗?',
-        icon: <ExclamationCircleOutlined />,
-        content: '',
-        onOk: async () => {
-            const response = await remove(id);
-            ResponseHandler.handle( response , () => {
-                message.success( '删除成功' );
-                actionRef.current.reload();
-            } );
-        },
-        onCancel() {
-          console.log('Cancel');
-        },
-      });
-}
+      title: '你确定要删除这个回复吗?',
+      icon: <ExclamationCircleOutlined />,
+      content: '',
+      onOk: async () => {
+        const response = await remove(id);
+        ResponseHandler.handle(response, () => {
+          message.success('删除成功');
+          actionRef.current.reload();
+        });
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  }
 
   return (
     <>
@@ -115,7 +121,7 @@ export default (props) => {
         toolBarRender={false}
         columns={columns}
         actionRef={actionRef}
-        pagination={{ pageSize:10 }}
+        pagination={{ pageSize: 10 }}
         request={(params) => queryDiscussReplies(params)}>
       </ProTable>
 

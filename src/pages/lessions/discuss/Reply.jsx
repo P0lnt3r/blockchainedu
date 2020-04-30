@@ -47,7 +47,7 @@ export default ( props ) => {
                     { discussContent }
                 </Form.Item>
             }
-            <Form.Item name='reply' label='我的回答'>
+            <Form.Item name='reply' label='我的回答' rules={[{ required: true, message: '请输入问答内容' }]}>
                 <Input.TextArea style={{ height:'200px' }} />
             </Form.Item>
             <Divider />

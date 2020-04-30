@@ -57,10 +57,16 @@ export default (props) => {
             hideInSearch: true,
             valueEnum: {
                 1: {
-                    text: '学生',
+                    text: '超级管理员',
                 },
                 2: {
-                    text: '老师',
+                    text: '学校管理员',
+                },
+                3: {
+                    text: '教师',
+                },
+                4: {
+                    text: '学生',
                 }
             },
             filters: [],

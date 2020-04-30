@@ -12,8 +12,8 @@ const config = {
         publics_api_base: 'http://120.77.153.35:8082/api/publics'
     },
     test:{
-        bm_api_base: 'http://localhost:8080/api/bm',        
-        publics_api_base: 'http://localhost:8080/api/publics'
+        bm_api_base: 'http://localhost:8082/api/bm',        
+        publics_api_base: 'http://localhost:8082/api/publics'
     },
     prod:{
         bm_api_base: 'http://127.0.0.1:8080'
