@@ -90,7 +90,7 @@ export default () => {
             <Row className={styles.desc}>
               <Col className={styles.label} offset={1} span={4}>收款地址</Col>
               <Col span={12} className={styles.content} >
-              bc1qjl8uwezzlech723lpnyuza0h2cdkvxvh54v3dn
+              3HhM3Fnz99SyiBsooVTaFd2SchFzNe2Y4K
               </Col>
             </Row>
             <div className={ styles.tips } > 

@@ -4,6 +4,7 @@ import { history } from 'umi';
 import styles from './style.less';
 import { getQuestions } from '@/services/publics';
 import Question from './Question';
+import { RollbackOutlined , ArrowLeftOutlined } from '@ant-design/icons';
 
 export default (props) => {
 
@@ -41,7 +42,14 @@ export default (props) => {
     return (
         <div className={styles.innerpage}>
             <div className={styles.innerpages} >
-                <h1>答疑专区</h1>
+                <div className={styles.top}>
+                    <h1>答疑专区</h1>
+                    <div className={styles.goback}>
+                        <Button type="primary" title='返回上级' size='large' shape="circle" icon={<ArrowLeftOutlined />}
+                                onClick={  ()=> history.goBack() } />
+                    </div>
+                </div>
+                <br/>
                 <div className={styles.con}>
                     <ul style={{ minHeight: '700px', marginLeft: '10px' }}>
                         {questions.length > 0 &&

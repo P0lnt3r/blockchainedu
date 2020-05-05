@@ -14,11 +14,27 @@
 .innerpage {
 	background: #ededed url(../../../assets/lessions/dyzqbg.png) center 146px no-repeat;
 	overflow: hidden;
-	h1 {
-		font-size: 48px;
-		color: @color_1;
-		margin: 75px 0 30px 25px;
+	.top{
+		margin-top: 75px;
+		padding-left: 30px;
+		h1 {
+			font-size: 48px;
+			color: @color_1;
+			width: 30%;
+			float: left;
+		}
+		.goback{
+			width: 30%;
+			float: right;
+			text-align: right;
+			margin-top: 20px;
+			padding-right: 20px;
+			button {
+				width:60px;height:60px;
+			}
+		}
 	}
+	
 }
 .innerpages {
 	width: 1220px;
@@ -27,7 +43,7 @@
 	.con {
 		width: 1200px;
 		min-height: 850px;
-		margin: 0 auto;
+		margin: 80px auto;
 		border-radius: 5px;
 		background: #FFF url(../../../assets/lessions/dyzq_con.png) 879px 498px no-repeat;
 		-moz-box-shadow: 0px 0px 20px #ccc;
@@ -107,9 +123,15 @@
 				float: right;
 			}
 		}
-		dl {
+		.dlsdt {
 			width: 100%;
 			overflow: hidden;
+			background: url(../../../assets/lessions/sdt.png) 15px no-repeat;
+		}
+		.dltch {
+			width: 100%;
+			overflow: hidden;
+			background: url(../../../assets/lessions/tch.png) 15px no-repeat;
 		}
 		dt {
 			width: 15%;
@@ -121,7 +143,6 @@
 			border-top-right-radius: 0;
 			border-bottom-left-radius: 5px;
 			border-bottom-right-radius: 0px;
-			background: #f1f1f1;
 			font-size: 16px;
 			color: @color_5;
 			.wz {
@@ -139,9 +160,10 @@
 			}
 		}
 		dd {
-			width: 77%;
+			width: 75%;
 			height: 150px;
 			float: left;
+			margin-left:20px;
 			border-top-left-radius: 0px;
 			border-top-right-radius: 5px;
 			border-bottom-left-radius: 0px;

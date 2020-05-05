@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import styles from './style.less';
 import { getReplies, getQuestion } from '@/services/publics'
 import Reply from './Reply';
+import { RollbackOutlined , ArrowLeftOutlined } from '@ant-design/icons';
+import { history } from 'umi'
 
 const parseUserType = function (type) {
-    if (type = 3) {
-        return '教师';
+    if (type === 3) {
+        return '老师';
     }
     return '学生';
 }
@@ -61,7 +63,14 @@ export default (props) => {
     return (
         <div className={styles.innerpage}>
             <div className={styles.innerpages} >
-                <h1>答疑专区</h1>
+                <div className={styles.top}>
+                    <h1>答疑专区</h1>
+                    <div className={styles.goback}>
+                            <Button type="primary" title='返回上级' size='large' shape="circle" icon={<ArrowLeftOutlined />}
+                                onClick={ () => history.goBack() } />
+                    </div>
+                </div>
+                <br/>
                 <div className={styles.con}>
                     <div style={{ minHeight: '700px', paddingTop: '30px' }}>
                         {
@@ -76,7 +85,7 @@ export default (props) => {
                                     setButsState({ ...butsState })
                                 }}>
                                 <div className={styles.buts} >
-                                    <div style={{ float: "right", marginRight: '45px', height: '22px' }}>
+                                    <div style={{ float: "right", marginRight: '62px', height: '22px' }}>
                                         <Button style={{ display: butsState[question.id] ? 'inline-block' : 'none' }} onClick={
                                             () => {
                                                 setDiscuss({
@@ -102,7 +111,7 @@ export default (props) => {
                                     </div>
                                 </div>
                                 <br />
-                                <dl>
+                                <dl className={question.userType === 3 ? styles.dltch : styles.dlsdt}>
                                     <dt>
                                         <div className={styles.wz}>
                                             <div className={styles.wz_tle} >姓名</div>{question.userName}
@@ -143,7 +152,7 @@ export default (props) => {
                                             setButsState({ ...butsState })
                                         }}>
                                         <div className={styles.buts} >
-                                            <div style={{ float: "right", marginRight: '45px', height: '22px' }}>
+                                            <div style={{ float: "right", marginRight: '62px', height: '22px' }}>
                                                 <Button style={{ display: butsState[reply.id] ? 'inline-block' : 'none' }} onClick={
                                                     () => {
                                                         setDiscuss(reply);
@@ -159,7 +168,7 @@ export default (props) => {
                                             </div>
                                         </div>
                                         <br />
-                                        <dl>
+                                        <dl className={reply.userType === 3 ? styles.dltch : styles.dlsdt}>
                                             <dt>
                                                 <div className={styles.wz}>
                                                     <div className={styles.wz_tle} >姓名</div>{reply.userName}
