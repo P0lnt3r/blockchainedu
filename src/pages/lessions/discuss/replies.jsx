@@ -4,11 +4,18 @@ import styles from './style.less';
 import { getReplies, getQuestion } from '@/services/publics'
 import Reply from './Reply';
 
+const parseUserType = function (type) {
+    if (type = 3) {
+        return '教师';
+    }
+    return '学生';
+}
+
 export default (props) => {
 
-    useEffect( ()=>{
-        window.document.title='答疑专区';
-    } )
+    useEffect(() => {
+        window.document.title = '答疑专区';
+    })
 
     const discussId = props.match.params.discussId;
 
@@ -72,23 +79,23 @@ export default (props) => {
                                     <div style={{ float: "right", marginRight: '45px', height: '22px' }}>
                                         <Button style={{ display: butsState[question.id] ? 'inline-block' : 'none' }} onClick={
                                             () => {
-                                                setDiscuss( {
-                                                    courseId:question.courseId,
-                                                    discussId:question.id,
-                                                    discussTitle:question.title,
-                                                    discussContent:question.content
-                                                } );
+                                                setDiscuss({
+                                                    courseId: question.courseId,
+                                                    discussId: question.id,
+                                                    discussTitle: question.title,
+                                                    discussContent: question.content
+                                                });
                                                 setReplyVisible(true)
                                             }
                                         }>引用</Button>
                                         <Button style={{ display: butsState[question.id] ? 'inline-block' : 'none' }} type='primary' onClick={
                                             () => {
-                                                setDiscuss( {
-                                                    courseId:question.courseId,
-                                                    discussId:question.id,
-                                                    discussTitle:question.title,
-                                                    discussContent:question.content
-                                                } );
+                                                setDiscuss({
+                                                    courseId: question.courseId,
+                                                    discussId: question.id,
+                                                    discussTitle: question.title,
+                                                    discussContent: question.content
+                                                });
                                                 setReplyVisible(true)
                                             }
                                         }>回复</Button>
@@ -101,7 +108,7 @@ export default (props) => {
                                             <div className={styles.wz_tle} >姓名</div>{question.userName}
                                         </div>
                                         <div className={styles.wz} >
-                                            <div className={styles.wz_tle} >身份</div>{question.userType}
+                                            <div className={styles.wz_tle} >身份</div>{parseUserType(question.userType)}
                                         </div>
                                         <div className={styles.wz}>
                                             <div className={styles.wz_tle} >注册时间</div>{question.userRegistTime}
@@ -158,7 +165,7 @@ export default (props) => {
                                                     <div className={styles.wz_tle} >姓名</div>{reply.userName}
                                                 </div>
                                                 <div className={styles.wz} >
-                                                    <div className={styles.wz_tle} >身份</div>{reply.userType}
+                                                    <div className={styles.wz_tle} >身份</div>{parseUserType(reply.userType)}
                                                 </div>
                                                 <div className={styles.wz}>
                                                     <div className={styles.wz_tle} >注册时间</div>{reply.userRegistTime}
@@ -166,7 +173,7 @@ export default (props) => {
                                             </dt>
                                             <dd>
                                                 <div className={styles.txtcon}>
-                                                    <div className={styles.bt} >{ '#'+((pagination.current - 1 ) * pagination.pageSize + replies.indexOf(reply) + 1) }</div>
+                                                    <div className={styles.bt} >{'#' + ((pagination.current - 1) * pagination.pageSize + replies.indexOf(reply) + 1)}</div>
                                                     <div className={styles.time} >{reply.createTime}</div>
                                                     <br />
                                                     <div className={styles.describe} >

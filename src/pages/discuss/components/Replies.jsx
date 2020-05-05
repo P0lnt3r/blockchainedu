@@ -36,39 +36,19 @@ export default (props) => {
     {
       title: '问题',
       dataIndex: 'discussTitle',
-      width: 300,
+      width: 200,
       ellipsis: true,
     },
     {
       title: '回复内容',
       dataIndex: 'content',
       hideInSearch: true,
-      width: 400,
+      width: 300,
       ellipsis: true,
     },
     {
       title: '回复用户',
       dataIndex: 'userName',
-    },
-    {
-      title: '用户身份',
-      dataIndex: 'userType',
-      hideInSearch: true,
-      valueEnum: {
-        1: {
-          text: '超级管理员',
-        },
-        2: {
-          text: '学校管理员',
-        },
-        3: {
-          text: '教师',
-        },
-        4: {
-          text: '学生',
-        }
-      },
-      filters: []
     },
     {
       title: '回答时间',

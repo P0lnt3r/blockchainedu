@@ -1,4 +1,4 @@
-import { Button, Descriptions, Row, Col, Divider, Form, Input,Select,Option } from 'antd';
+import { Button, Row, Col, Divider, Form, Input,Select , Modal } from 'antd';
 import React, { useState,useEffect  } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
@@ -31,6 +31,21 @@ const formatNumber = (value) => {
   return `${prefix}${result}${list[1] ? `.${list[1]}` : ''}`;
 }
 
+const issueSuccess = function(){
+  Modal.success({
+    title: '提示',
+    content: (
+      <div>
+        <p>发行成功，您的数字货币已经开始流通了</p>
+      </div>
+    ),
+    okText:'确定',
+    onOk() {
+      history.push('/lessions/1/3')
+    },
+  });
+}
+
 export default () => {
 
   useEffect( ()=>{
@@ -47,7 +62,7 @@ export default () => {
           <div className={styles.h1}>实训第一堂</div>
           <div className={styles.h2}>数字货币发行</div>
 
-          <Form {...layout} name='inputform' form={form} hideRequiredMark onFinish={ (values) => history.push('/lessions/1/3') }
+          <Form {...layout} name='inputform' form={form} hideRequiredMark onFinish={ (values) => issueSuccess() }
             >
             <div className={styles.tips}>请按照右侧资产实例,创建一个属于自己的数字资产吧!</div>
             <br/><br/>

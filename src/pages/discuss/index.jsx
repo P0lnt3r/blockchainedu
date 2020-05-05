@@ -18,8 +18,6 @@ export default (props) => {
     fetchCourses();
   }, [])
 
-
-
   return (
     <PageHeaderWrapper subTitle='管理系统内的答疑内容'>
       <Row>
@@ -30,9 +28,9 @@ export default (props) => {
               <Col span={6} key={`${course.name}-col`} style={{ padding:'5px' }} >
                 <Card hoverable key={`${course.name}-col-card`} >
                   <Row>
-                    <Col span={16} style={{marginTop:'20px'}}>{course.name}</Col>
-                    <Col span={4}><Statistic title="提问数" value={course.questions} /></Col>
-                    <Col span={4}><Statistic title="回复数" value={course.replies} /></Col>
+                    <Col span={14} style={{marginTop:'15px'}}>{course.name}</Col>
+                    <Col span={4}><Statistic title="提问" value={course.questions} /></Col>
+                    <Col span={4}><Statistic title="回复" value={course.replies} /></Col>
                   </Row>
                 </Card>
               </Col>

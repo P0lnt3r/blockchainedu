@@ -37,39 +37,19 @@ export default (props) => {
         {
             title: '标题',
             dataIndex: 'title',
-            width:300,
+            width:200,
             ellipsis: true,
         },
         {
             title: '问题内容',
             dataIndex: 'content',
             hideInSearch: true,
-            width:400,
+            width:300,
             ellipsis: true,
         },
         {
             title: '提问用户',
             dataIndex: 'userName',
-        },
-        {
-            title: '身份',
-            dataIndex: 'userType',
-            hideInSearch: true,
-            valueEnum: {
-                1: {
-                    text: '超级管理员',
-                },
-                2: {
-                    text: '学校管理员',
-                },
-                3: {
-                    text: '教师',
-                },
-                4: {
-                    text: '学生',
-                }
-            },
-            filters: [],
         },
         {
             title: '时间',
@@ -82,7 +62,7 @@ export default (props) => {
             hideInSearch: true,
             render: (replyCount) => {
                 return (
-                    <a>{replyCount}</a>
+                    <span>{replyCount}</span>
                 )
             }
         },

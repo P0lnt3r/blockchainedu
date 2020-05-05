@@ -1,14 +1,31 @@
-import { Button } from 'antd';
+import { Button , Modal } from 'antd';
 import React, { useState,useEffect } from 'react';
 import styles from './style.less';
 import { history } from 'umi';
+import { CheckCircleTwoTone  } from '@ant-design/icons';
 
-const imgSrc_sy_l_1 = require('@/assets/lessions/sy_l_1.png');
-const imgSrc_sy_r_1 = require('@/assets/lessions/sy_r_1.png');
 const imgSrc_sy_r_2 = require('@/assets/lessions/sy_r_2.png');
 const imgSrc_sy_r_3 = require('@/assets/lessions/sy_r_3.png');
-const imgSrc_sy_r_4 = require('@/assets/lessions/sy_r_4.png');
 const imgSrc_yxzb_bg = require('@/assets/lessions/yxzb_bg.png');
+
+const confirm = Modal.confirm;
+
+const nextConfirm = function(){
+  Modal.confirm({
+    icon: <CheckCircleTwoTone twoToneColor="#52c41a" />,
+    title: '提示',
+    content: (
+      <div>
+        <p>本堂实训已完成，是否进入下一堂实训?</p>
+      </div>
+    ),
+    okText:'确定',
+    cancelText: '取消',
+    onOk() {
+      history.push('/lessions/2')
+    },
+  });
+}
 
 export default () => {
 
@@ -36,7 +53,7 @@ export default () => {
           </div>
           
           <div className={styles.clickbtn}>
-            <Button type='primary' size='large' onClick={ ()=> history.push('/lessions/2') }>进入实训</Button>
+            <Button type='primary' size='large' onClick={ ()=> nextConfirm() }>进入下一堂实训</Button>
           </div>
 
         </div>

@@ -84,7 +84,10 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className={ styles.block_img }><img src={imgSrc_sy_r_4} /></div>
+
+        <div className={ styles.block_img }>
+          <img src={imgSrc_sy_r_4} />
+        </div>
       </div>
 
     </div>

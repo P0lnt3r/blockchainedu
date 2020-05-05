@@ -32,19 +32,19 @@ export default () => {
             <ul>
               <li>
                 <span onClick={()=>history.push('/lessions/1')}>实训第一堂 数字货币发行</span>
-                <button onClick={() => history.push('/lessions/discuss/questions/1')} className={styles.button} >答疑专区</button>
+                <div onClick={() => history.push('/lessions/discuss/questions/1')} className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span onClick={()=>history.push('/lessions/2')}>实训第二堂 数字货币交易</span>
-                <button onClick={() => history.push('/lessions/discuss/questions/2')} className={styles.button} >答疑专区</button>
+                <div onClick={() => history.push('/lessions/discuss/questions/2')} className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
             </ul>
           </div>
@@ -55,19 +55,19 @@ export default () => {
             <ul>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
               <li>
                 <span>实训第一堂 数字货币发行</span>
-                <button onClick={() => console.log(1)} className={styles.button} >答疑专区</button>
+                <div className={styles.divbutton} >答疑专区</div>
               </li>
             </ul>
           </div>
